@@ -1,0 +1,107 @@
+/* ===== GENERAL STYLES ===== */
+body {
+  margin: 0;
+  background-color: #f5fff5;
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+/* ===== HOME SCREEN ===== */
+.home {
+  padding: 30px;
+  text-align: center;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #2a7a3a;
+}
+
+.total {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.add-btn {
+  background-color: #2a7a3a;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.add-btn:hover { background-color: #34a24d; }
+
+.empty {
+  color: #777;
+  margin-top: 25px;
+}
+
+.menu-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+/* ===== MENU ITEM CARD ===== */
+.menu-item-card {
+  width: 300px;
+  border: 1px solid #ddd;
+  background-color: #f9fff9;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.menu-item-card h3 { margin-top: 0; color: #2a7a3a; }
+.menu-item-card p { margin: 5px 0; color: #333; font-size: 14px; }
+
+/* ===== ADD MENU ITEM SCREEN ===== */
+.add-item-page {
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding: 40px;
+}
+h2 {
+  color: #2a7a3a;
+  text-align: center;
+}
+.add-item-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+input, textarea, select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+textarea { resize: vertical; min-height: 70px; }
+.btn-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.save-btn {
+  background-color: #2a7a3a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.save-btn:hover { background-color: #35a84d; }
+.cancel-btn {
+  background-color: #aaa;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.cancel-btn:hover { background-color: #888; }
