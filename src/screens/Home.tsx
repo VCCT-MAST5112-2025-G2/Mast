@@ -34,8 +34,7 @@ const Home: React.FC<HomeProps> = ({ items, onAddClick }) => {
 const styles = StyleSheet.create({
   container: {
     padding: 30,
-    alignItems: 'center',
-    minHeight: '100vh',
+    flex: 1,
   },
   h1: {
     color: '#2a7a3a',

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Home from "../screens//Home";
 import AddItem from "../screens/AddItem";
 import { MenuItem } from "../screens/MenuItem";
-import "./App.css";
+
 
 const App: React.FC = () => {
   const [items, setItems] = useState<MenuItem[]>([]);

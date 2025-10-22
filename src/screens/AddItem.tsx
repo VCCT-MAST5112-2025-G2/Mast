@@ -85,19 +85,13 @@ const AddItem: React.FC<AddItemProps> = ({ onAdd, onCancel }) => {
 const styles = StyleSheet.create({
   addItemPage: {
     backgroundColor: '#ffffff',
-    minHeight: '100vh',
+    flex: 1,
     padding: 40,
-  },
-  h2: {
-    color: '#2a7a3a',
-    textAlign: 'center',
-    fontSize: 20,
-    fontWeight: 'bold',
   },
   addItemForm: {
     gap: 12,
     maxWidth: 400,
-    marginHorizontal: 'auto',
+    alignSelf: 'center',
     marginTop: 20,
   },
   input: {
