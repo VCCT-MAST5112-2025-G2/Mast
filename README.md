@@ -29,6 +29,8 @@ Scan the QR code with the Expo Go app on your phone (iOS or Android).
 Run on an Android emulator.
 Run on an iOS simulator (macOS only).
 Run in a web browser (limited functionality for some native modules).
+
+
 ##Github link:
 https://github.com/VCCT-MAST5112-2025-G2/Mast
 
