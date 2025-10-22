@@ -3,14 +3,14 @@
      A simple mobile application for managing and displaying a restaurant's menu items. This app allows chefs or staff to add new dishes
       with details like name, description, course, and price, and view them in a list.
      
-     ## Features
+     ## **Features:**
     
      **View Menu Items:** See a list of all added dishes.
      **Add New Items:** Easily add new dishes with a dedicated form.
     **Dish Details:** Each menu item includes a dish name, description, course (e.g., Starters, Mains, Desserts), and price.
     *   **Simple Navigation:** Seamlessly switch between viewing the menu and adding new items.
     
-    ## How to Run
+    ##**How to Run:**
     
     This project is built with React Native and Expo.
    
@@ -31,23 +31,24 @@ Run on an iOS simulator (macOS only).
 Run in a web browser (limited functionality for some native modules).
 
 
-##Github link:
+##**Github link:**
 https://github.com/VCCT-MAST5112-2025-G2/Mast
 
-##Youtube Link
+##**Youtube Link:**
+
    
-## Soft Ware Used 
+## **Soft Ware Used:**
    React Native: For building native mobile applications using JavaScript and React.
     Expo: A framework and platform for universal React applications.
       TypeScript: For type-safe JavaScript.
       `@react-native-picker/picker`: For dropdown selection in forms.
 
-      How to operate the Chef's Menu App:
+    **How to operate the Chef's Menu App:**
 
-   1. Launch the App:
+   1. **Launch the App:**
        * The app will start on the Home Screen, displaying "Chef's Menu" and the current number of items (initially zero).
 
-   2. Add a New Menu Item:
+   2. **Add a New Menu Item:**
         On the Home Screen, tap the "+ Add Menu Item" button.
         You will be taken to the Add Menu Item Screen.
         Fill in the details for the new dish:
@@ -59,5 +60,5 @@ https://github.com/VCCT-MAST5112-2025-G2/Mast
             After adding, you'll return to the Home Screen, and your new dish will appear.
             To go back without adding, tap "Cancel" or the "🏠 Home" button.
 
-   3. View Menu Items:
+   3. **View Menu Items:**
         On the Home Screen, all added menu items are displayed as cards, showing their name, description, course, and price.
