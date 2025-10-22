@@ -31,7 +31,7 @@ const AddItem: React.FC<AddItemProps> = ({ onAdd, onCancel }) => {
 
   return (
     <ScrollView style={styles.addItemPage}>
-      <Text style={styles.h2}>Add Menu Item</Text>
+      <Text style={styles.title}>Add Menu Item</Text>
       <View style={styles.addItemForm}>
         <Text>Dish Name</Text>
         <TextInput
@@ -124,6 +124,12 @@ const styles = StyleSheet.create({
   },
   btnText: {
     color: 'white',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    alignSelf: 'center',
+    marginBottom: 20,
   },
 });
 
