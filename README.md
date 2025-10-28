@@ -3,9 +3,7 @@
    A simple mobile application for managing and displaying a restaurant's menu items.
      This app allows chefs or staff to add new dishes
       with details like name, description, course, and price, and view them in a list.
-     
    ## **Features:**
-    
    **View Menu Items:** See a list of all added dishes.
      **Add New Items:** Easily add new dishes with a dedicated form.
     **Dish Details:** Each menu item includes a dish name, description, 
