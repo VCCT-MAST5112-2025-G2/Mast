@@ -17,7 +17,7 @@ const MenuItemCard: React.FC<CardProps> = ({ item }) => {
   );
 };
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({ fsjgfyi
   card: {
     width: 300,
     borderWidth: 1,
