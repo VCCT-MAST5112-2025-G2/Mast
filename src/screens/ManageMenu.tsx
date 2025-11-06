@@ -18,7 +18,7 @@ const ManageMenu: React.FC<ManageMenuProps> = ({ items, onAddItem, onRemoveItem,
 
   const handleSubmit = () => {
     if (!dishName || !description || !price) {
-      Alert.alert("Validation Error", "Please fill in all fields.");
+      Alert.alert("Error", "Please fill in all fields.");
       return;
     }
     const newItem: MenuItem = {
