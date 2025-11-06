@@ -9,33 +9,10 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = ({ items, onAddClick }) => {
-  const courseAverages = items.reduce((acc, item) => {
-    const course = acc.find((c) => c.course === item.course);
-    if (course) {
-      course.total += item.price;
-      course.count++;
-      course.average = course.total / course.count;
-    } else {
-      acc.push({
-        course: item.course,
-        total: item.price,
-        count: 1,
-        average: item.price,
-      });
-    }
-    return acc;
-  }, [] as { course: string; total: number; count: number; average: number }[]);
-
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.h1}>Chef’s Menu</Text>
       <Text style={styles.total}>Total menu items: {items.length}</Text>
-
-      {courseAverages.map((course) => (
-        <Text key={course.course} style={styles.total}>
-          Average {course.course} price: ${course.average.toFixed(2)}
-        </Text>
-      ))}
 
       <Pressable style={styles.addBtn} onPress={onAddClick}>
         <Text style={styles.addBtnText}>+ Add Menu Item</Text>
