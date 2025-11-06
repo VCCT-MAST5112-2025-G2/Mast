@@ -1,5 +1,5 @@
 import React from 'react';
-import App from './src/naviagtion/App';
+import App from './src/navigation/App';
 
 export default function MainApp() {
   return <App />;

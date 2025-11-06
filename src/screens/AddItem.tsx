@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Pressable, StyleSheet, ScrollView } from "react-native";
+import { View, Text, TextInput, Pressable, StyleSheet, ScrollView, Alert } from "react-native";
 import { Picker } from '@react-native-picker/picker';
 import { MenuItem } from "../screens/MenuItem";
 
@@ -16,7 +16,7 @@ const AddItem: React.FC<AddItemProps> = ({ onAdd, onCancel }) => {
 
   const handleSubmit = () => {
     if (!dishName || !description || !price) {
-      alert("Please fill in all fields.");
+      Alert.alert("Validation Error", "Please fill in all fields.");
       return;
     }
     const newItem: MenuItem = {
