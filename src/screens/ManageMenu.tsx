@@ -7,10 +7,11 @@ interface ManageMenuProps {
   items: MenuItem[];
   onAddItem: (item: MenuItem) => void;
   onRemoveItem: (id: number) => void;
-  onCancel: () => void;
+  onHomeClick: () => void;
+  onGuestClick: () => void;
 }
 
-const ManageMenu: React.FC<ManageMenuProps> = ({ items, onAddItem, onRemoveItem, onCancel }) => {
+const ManageMenu: React.FC<ManageMenuProps> = ({ items, onAddItem, onRemoveItem, onHomeClick, onGuestClick }) => {
   const [dishName, setDishName] = useState("");
   const [description, setDescription] = useState("");
   const [course, setCourse] = useState("Starters");
@@ -80,8 +81,11 @@ const ManageMenu: React.FC<ManageMenuProps> = ({ items, onAddItem, onRemoveItem,
           <Pressable style={styles.saveBtn} onPress={handleSubmit}>
             <Text style={styles.btnText}>Add Dish</Text>
           </Pressable>
-          <Pressable style={styles.cancelBtn} onPress={onCancel}>
-            <Text style={styles.btnText}>Back</Text>
+          <Pressable style={styles.homeBtn} onPress={onHomeClick}>
+            <Text style={styles.btnText}>Chef's Menu</Text>
+          </Pressable>
+          <Pressable style={styles.guestBtn} onPress={onGuestClick}>
+            <Text style={styles.btnText}>Guest Menu</Text>
           </Pressable>
         </View>
       </View>
@@ -159,8 +163,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 25,
     borderRadius: 8,
   },
-  cancelBtn: {
-    backgroundColor: '#aaa',
+  homeBtn: {
+    backgroundColor: '#007bff',
+    paddingVertical: 12,
+    paddingHorizontal: 25,
+    borderRadius: 8,
+  },
+  guestBtn: {
+    backgroundColor: '#6c757d', // A neutral color for guest button
     paddingVertical: 12,
     paddingHorizontal: 25,
     borderRadius: 8,

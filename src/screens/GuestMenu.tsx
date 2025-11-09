@@ -6,10 +6,11 @@ import MenuItemCard from "./MenuItemCard";
 
 interface GuestMenuProps {
   items: MenuItem[];
-  onBack: () => void;
+  onHomeClick: () => void;
+  onManageClick: () => void;
 }
 
-const GuestMenu: React.FC<GuestMenuProps> = ({ items, onBack }) => {
+const GuestMenu: React.FC<GuestMenuProps> = ({ items, onHomeClick, onManageClick }) => {
   const [selectedCourse, setSelectedCourse] = useState<string>("All");
 
   const filteredItems = selectedCourse === "All"
@@ -45,9 +46,14 @@ const GuestMenu: React.FC<GuestMenuProps> = ({ items, onBack }) => {
         </View>
       )}
 
-      <Pressable style={styles.backBtn} onPress={onBack}>
-        <Text style={styles.backBtnText}>Back to Home</Text>
-      </Pressable>
+      <View style={styles.buttonContainer}>
+        <Pressable style={styles.homeBtn} onPress={onHomeClick}>
+          <Text style={styles.buttonText}>Chef's Menu</Text>
+        </Pressable>
+        <Pressable style={styles.manageBtn} onPress={onManageClick}>
+          <Text style={styles.buttonText}>Manage Menu</Text>
+        </Pressable>
+      </View>
     </ScrollView>
   );
 };
@@ -98,6 +104,28 @@ const styles = StyleSheet.create({
     color: '#777',
     marginTop: 20,
     fontSize: 16,
+  },
+  buttonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginTop: 20,
+    marginBottom: 20,
+  },
+  homeBtn: {
+    backgroundColor: '#007bff',
+    paddingVertical: 10,
+    paddingHorizontal: 18,
+    borderRadius: 8,
+  },
+  manageBtn: {
+    backgroundColor: '#2a7a3a',
+    paddingVertical: 10,
+    paddingHorizontal: 18,
+    borderRadius: 8,
+  },
+  buttonText: {
+    color: 'white',
+    fontWeight: 'bold',
   },
   backBtn: {
     backgroundColor: '#007bff',

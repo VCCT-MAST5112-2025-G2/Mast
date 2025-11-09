@@ -50,7 +50,7 @@ const Home: React.FC<HomeProps> = ({ items, onAddClick, onGuestClick }) => {
           <Text style={styles.buttonText}>Manage Menu</Text>
         </Pressable>
         <Pressable style={styles.guestBtn} onPress={onGuestClick}>
-          <Text style={styles.buttonText}>Guest View</Text>
+          <Text style={styles.buttonText}>Guest Menu</Text>
         </Pressable>
       </View>
 
