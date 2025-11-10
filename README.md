@@ -37,15 +37,15 @@ https://youtube.be/Y7bnVplmPcs?feature=shared
    1. **Launch the App:**
        * The app will start on the Home Screen, displaying "Guest Menu" and the current number of items (initially six).
    2. **Add a New Menu Item:**
-        On the Home Screen, tap the "Manage Menu" button.
-        You will be taken to the Add Menu Item Screen.
-        Fill in the details for the new dish:
-            Dish Name: Enter the name of the dish (e.g., "Grilled Salmon").
-            Description: Provide a short description (e.g., "Fresh salmon with seasonal vegetables").
-            Course: Select the course from the dropdown (Starters, Mains, Desserts).
-            Price (R): Enter the price (e.g., "120.00").
-            Tap the "Add Dish" button to save. If any fields are empty, an alert will prompt you to fill them.
-            After adding, you'll return to the Home Screen, and your new dish will appear.
-            To go back without adding, tap "clear" or the "Guest or Chef Menu" button.
+       * On the Home Screen, tap the "Manage Menu" button.
+       * You will be taken to the Add Menu Item Screen.
+      *  Fill in the details for the new dish:
+           * Dish Name: Enter the name of the dish (e.g., "Grilled Salmon").
+           * Description: Provide a short description (e.g., "Fresh salmon with seasonal vegetables").
+           * Course: Select the course from the dropdown (Starters, Mains, Desserts).
+           * Price (R): Enter the price (e.g., "120.00").
+           * Tap the "Add Dish" button to save. If any fields are empty, an alert will prompt you to fill them.
+           * After adding, you'll return to the Home Screen, and your new dish will appear.
+           * To go back without adding, tap "clear" or the "Guest or Chef Menu" button.
    3. **View Menu Items:**
-        On the Home Screen, all added menu items are displayed as cards, showing their name, description, course, and price.
+       * On the Home Screen, all added menu items are displayed as cards, showing their name, description, course, and price.
