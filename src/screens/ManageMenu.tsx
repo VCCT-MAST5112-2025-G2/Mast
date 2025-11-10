@@ -77,17 +77,9 @@ const ManageMenu: React.FC<ManageMenuProps> = ({ items, onAddItem, onRemoveItem,
           keyboardType="numeric"
         />
 
-        <View style={styles.btnRow}>
-          <Pressable style={styles.saveBtn} onPress={handleSubmit}>
-            <Text style={styles.btnText}>Add Dish</Text>
-          </Pressable>
-          <Pressable style={styles.homeBtn} onPress={onHomeClick}>
-            <Text style={styles.btnText}>Chef's Menu</Text>
-          </Pressable>
-          <Pressable style={styles.guestBtn} onPress={onGuestClick}>
-            <Text style={styles.btnText}>Guest Menu</Text>
-          </Pressable>
-        </View>
+        <Pressable style={styles.saveBtn} onPress={handleSubmit}>
+          <Text style={styles.btnText}>Add Dish</Text>
+        </Pressable>
       </View>
 
       <View style={styles.currentItemsContainer}>
@@ -104,6 +96,15 @@ const ManageMenu: React.FC<ManageMenuProps> = ({ items, onAddItem, onRemoveItem,
             </View>
           ))
         )}
+      </View>
+
+      <View style={styles.btnRow}>
+        <Pressable style={styles.homeBtn} onPress={onHomeClick}>
+          <Text style={styles.btnText}>Chef's Menu</Text>
+        </Pressable>
+        <Pressable style={styles.guestBtn} onPress={onGuestClick}>
+          <Text style={styles.btnText}>Guest Menu</Text>
+        </Pressable>
       </View>
     </ScrollView>
   );

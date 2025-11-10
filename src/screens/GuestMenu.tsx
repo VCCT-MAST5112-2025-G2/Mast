@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   },
   filterContainer: {
     flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'flex-start', // Changed from 'center'
     marginBottom: 20,
     backgroundColor: '#fff',
     padding: 10,
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
     color: '#333',
   },
   picker: {
-    flex: 1,
+    width: 150, // Set a fixed width
     height: 40,
   },
   menuList: {
