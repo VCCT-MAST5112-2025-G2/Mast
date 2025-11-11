@@ -27,6 +27,7 @@ const AddItem: React.FC<AddItemProps> = ({ onAdd, onCancel }) => {
       price: parseFloat(price),
     };
     onAdd(newItem);
+    Alert.alert("Success", "Dish added successfully.");
   };
 
   return (
@@ -84,7 +85,7 @@ const AddItem: React.FC<AddItemProps> = ({ onAdd, onCancel }) => {
 
 const styles = StyleSheet.create({
   addItemPage: {
-    backgroundColor: '#ffffff',
+    backgroundColor: '#f8f9fa',
     flex: 1,
     padding: 40,
   },
@@ -93,12 +94,18 @@ const styles = StyleSheet.create({
     maxWidth: 400,
     alignSelf: 'center',
     marginTop: 20,
+    backgroundColor: '#f8f9fa',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 1,
   },
   input: {
     padding: 10,
     borderRadius: 6,
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: '#ced4da',
     fontSize: 14,
   },
   textarea: {
@@ -111,16 +118,26 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   saveBtn: {
-    backgroundColor: '#2a7a3a',
+    backgroundColor: 'green',
     borderRadius: 6,
     paddingVertical: 10,
     paddingHorizontal: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 1,
   },
   cancelBtn: {
-    backgroundColor: '#aaa',
+    backgroundColor: '#007bff',
     borderRadius: 6,
     paddingVertical: 10,
     paddingHorizontal: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 1,
   },
   btnText: {
     color: 'white',
@@ -130,6 +147,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     alignSelf: 'center',
     marginBottom: 20,
+    color: '#007bff',
   },
 });
 

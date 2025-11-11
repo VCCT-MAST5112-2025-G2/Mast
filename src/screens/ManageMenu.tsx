@@ -30,6 +30,7 @@ const ManageMenu: React.FC<ManageMenuProps> = ({ items, onAddItem, onRemoveItem,
       price: parseFloat(price),
     };
     onAddItem(newItem);
+    Alert.alert("Success", "Dish added successfully.");
     setDishName("");
     setDescription("");
     setCourse("Starters");
@@ -90,7 +91,7 @@ const ManageMenu: React.FC<ManageMenuProps> = ({ items, onAddItem, onRemoveItem,
           items.map((item) => (
             <View key={item.id} style={styles.menuItemRow}>
               <Text style={styles.menuItemText}>{item.dishName} (R{item.price.toFixed(2)})</Text>
-              <Pressable style={styles.removeBtn} onPress={() => onRemoveItem(item.id)}>
+              <Pressable style={styles.removeBtn} onPress={() => {onRemoveItem(item.id); Alert.alert("Success", "Dish removed successfully.");}}>
                 <Text style={styles.removeBtnText}>Remove</Text>
               </Pressable>
             </View>
@@ -114,38 +115,38 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#f8f9fa',
   },
   title: {
     fontSize: 28,
     fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: 20,
-    color: '#2a7a3a',
+    color: '#007bff',
   },
   subtitle: {
     fontSize: 22,
     fontWeight: 'bold',
     marginTop: 30,
     marginBottom: 15,
-    color: '#2a7a3a',
+    color: '#007bff',
   },
   addItemForm: {
-    backgroundColor: '#fff',
+    backgroundColor: '#f8f9fa',
     padding: 20,
     borderRadius: 10,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 3,
+    shadowRadius: 2,
+    elevation: 1,
     marginBottom: 30,
   },
   input: {
     padding: 12,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#ddd',
+    borderColor: '#ced4da',
     fontSize: 16,
     marginBottom: 15,
   },
@@ -159,22 +160,37 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   saveBtn: {
-    backgroundColor: '#2a7a3a',
+    backgroundColor: 'green',
     paddingVertical: 12,
     paddingHorizontal: 25,
     borderRadius: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 1,
   },
   homeBtn: {
     backgroundColor: '#007bff',
     paddingVertical: 12,
     paddingHorizontal: 25,
     borderRadius: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 1,
   },
   guestBtn: {
-    backgroundColor: '#6c757d', // A neutral color for guest button
+    backgroundColor: '#007bff', 
     paddingVertical: 12,
     paddingHorizontal: 25,
     borderRadius: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 1,
   },
   btnText: {
     color: 'white',
@@ -182,14 +198,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   currentItemsContainer: {
-    backgroundColor: '#fff',
+    backgroundColor: '#f8f9fa',
     padding: 20,
     borderRadius: 10,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 3,
+    shadowRadius: 2,
+    elevation: 1,
   },
   menuItemRow: {
     flexDirection: 'row',
@@ -197,17 +213,22 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: 10,
     borderBottomWidth: 1,
-    borderBottomColor: '#eee',
+    borderBottomColor: '#ced4da',
   },
   menuItemText: {
     fontSize: 16,
     flex: 1,
   },
   removeBtn: {
-    backgroundColor: '#dc3545',
+    backgroundColor: 'red',
     paddingVertical: 8,
     paddingHorizontal: 15,
     borderRadius: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 1,
   },
   removeBtnText: {
     color: 'white',

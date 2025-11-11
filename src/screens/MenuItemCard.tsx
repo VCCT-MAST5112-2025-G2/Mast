@@ -21,25 +21,25 @@ const styles = StyleSheet.create({
   card: {
     width: 300,
     borderWidth: 1,
-    borderColor: '#ddd',
-    backgroundColor: '#f9fff9',
+    borderColor: '#ced4da',
+    backgroundColor: '#e6f2ff',
     padding: 15,
     borderRadius: 8,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 3, // for Android
+    shadowRadius: 2,
+    elevation: 1, // for Android
   },
   h3: {
     marginTop: 0,
-    color: '#2a7a3a',
+    color: '#007bff',
     fontSize: 18,
     fontWeight: 'bold',
   },
   p: {
     marginVertical: 5,
-    color: '#333',
+    color: '#6c757d',
     fontSize: 14,
   },
 });
