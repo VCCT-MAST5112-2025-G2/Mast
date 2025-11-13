@@ -10,7 +10,7 @@ interface ManageMenuProps {
   onHomeClick: () => void;
   onGuestClick: () => void;
 }
-
+//alerts depending on what user is doing
 const ManageMenu: React.FC<ManageMenuProps> = ({ items, onAddItem, onRemoveItem, onHomeClick, onGuestClick }) => {
   const [dishName, setDishName] = useState("");
   const [description, setDescription] = useState("");
@@ -43,9 +43,9 @@ const ManageMenu: React.FC<ManageMenuProps> = ({ items, onAddItem, onRemoveItem,
     setCourse("Starters");
     setPrice("");
   };
-
-  return (
-    <ScrollView style={styles.container}>
+// text placholders to guide user on what to do in the empty fields
+  return ( 
+    <ScrollView style={styles.container}> 
       <Text style={styles.title}>Manage Menu Items</Text>
 
       <View style={styles.addItemForm}>
@@ -102,8 +102,8 @@ const ManageMenu: React.FC<ManageMenuProps> = ({ items, onAddItem, onRemoveItem,
             <View key={item.id} style={styles.menuItemRow}>
               <Text style={styles.menuItemText}>{item.dishName} (R{item.price.toFixed(2)})</Text>
               <Pressable style={styles.removeBtn} onPress={() => {onRemoveItem(item.id); Alert.alert("Success", "Dish removed successfully.");}}>
-                <Text style={styles.removeBtnText}>Remove</Text>
-              </Pressable>
+                <Text style={styles.removeBtnText}>Remove</Text>  
+              </Pressable> 
             </View>
           ))
         )}
@@ -120,7 +120,7 @@ const ManageMenu: React.FC<ManageMenuProps> = ({ items, onAddItem, onRemoveItem,
     </ScrollView>
   );
 };
-
+//styling for buttons and containers
 const styles = StyleSheet.create({
   container: {
     flex: 1,

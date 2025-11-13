@@ -5,7 +5,7 @@ import { MenuItem } from "../screens/MenuItem";
 interface CardProps {
   item: MenuItem;
 }
-
+//Cards to dispplay added menu items 
 const MenuItemCard: React.FC<CardProps> = ({ item }) => {
   return (
     <View style={styles.card}>
@@ -16,7 +16,7 @@ const MenuItemCard: React.FC<CardProps> = ({ item }) => {
     </View>
   );
 };
-
+//styling for buttons and containers
 const styles = StyleSheet.create({
   card: {
     width: 300,

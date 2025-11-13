@@ -6,7 +6,7 @@ import GuestMenu from "../screens/GuestMenu";
 import { MenuItem } from "../screens/MenuItem";
 
 type Page = 'Home' | 'ManageMenu' | 'GuestMenu';
-
+// main page and code to render and be able to move betwenn the available pages 
 const App: React.FC = () => {
     const [items, setItems] = useState<MenuItem[]>([]);
     const [currentPage, setCurrentPage] = useState<Page>('GuestMenu');

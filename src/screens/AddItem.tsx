@@ -16,7 +16,7 @@ const AddItem: React.FC<AddItemProps> = ({ onAdd, onCancel }) => {
 
   const handleSubmit = () => {
     if (!dishName || !description || !price) {
-      Alert.alert("Validation Error", "Please fill in all fields.");
+      Alert.alert("Validation Error", "Please fill in all fields."); //alert for validation
       return;
     }
     const newItem: MenuItem = {
@@ -27,7 +27,7 @@ const AddItem: React.FC<AddItemProps> = ({ onAdd, onCancel }) => {
       price: parseFloat(price),
     };
     onAdd(newItem);
-    Alert.alert("Success", "Dish added successfully.");
+    Alert.alert("Success", "Dish added successfully."); //alert
   };
 
   const handleClear = () => {
@@ -81,9 +81,7 @@ const AddItem: React.FC<AddItemProps> = ({ onAdd, onCancel }) => {
           <Pressable style={styles.saveBtn} onPress={handleSubmit}>
             <Text style={styles.btnText}>Add Dish</Text>
           </Pressable>
-          <Pressable style={styles.clearBtn} onPress={handleClear}>
-            <Text style={styles.btnText}>Clear</Text>
-          </Pressable>
+          
           <Pressable style={styles.cancelBtn} onPress={onCancel}>
             <Text style={styles.btnText}>Cancel</Text>
           </Pressable>
@@ -92,7 +90,7 @@ const AddItem: React.FC<AddItemProps> = ({ onAdd, onCancel }) => {
     </ScrollView>
   );
 };
-
+//styling for the different buttons and containers and colrs 
 const styles = StyleSheet.create({
   addItemPage: {
     backgroundColor: '#f8f9fa',

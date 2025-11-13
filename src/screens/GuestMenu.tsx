@@ -9,7 +9,7 @@ interface GuestMenuProps {
   onHomeClick: () => void;
   onManageClick: () => void;
 }
-
+// list to show only the the selected course's dishes
 const GuestMenu: React.FC<GuestMenuProps> = ({ items, onHomeClick, onManageClick }) => {
   const [selectedCourse, setSelectedCourse] = useState<string>("All");
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
@@ -30,7 +30,7 @@ const GuestMenu: React.FC<GuestMenuProps> = ({ items, onHomeClick, onManageClick
       <Text style={styles.title}>Guest Menu</Text>
 
       <View style={styles.filterContainer}>
-        <Text style={styles.filterLabel}>Filter by Course:</Text>
+        <Text style={styles.filterLabel}>Filter by Course:</Text> 
         <View style={{ position: 'relative' }}>
           <Pressable style={styles.dropdownButton} onPress={() => setIsDropdownOpen(!isDropdownOpen)}>
             <Text style={styles.dropdownButtonText}>{selectedCourse}</Text>
@@ -74,7 +74,7 @@ const GuestMenu: React.FC<GuestMenuProps> = ({ items, onHomeClick, onManageClick
     </ScrollView>
   );
 };
-
+//styling for buttons and colors and containers 
 const styles = StyleSheet.create({
   container: {
     padding: 30,

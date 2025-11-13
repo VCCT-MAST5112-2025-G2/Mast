@@ -8,7 +8,7 @@ interface HomeProps {
   onAddClick: () => void;
   onGuestClick: () => void;
 }
-
+//calculation to calculate average price of each course added 
 const Home: React.FC<HomeProps> = ({ items, onAddClick, onGuestClick }) => {
   const calculateAveragePrices = () => {
     const coursePrices: { [key: string]: { total: number; count: number } } = {};
@@ -32,11 +32,11 @@ const Home: React.FC<HomeProps> = ({ items, onAddClick, onGuestClick }) => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.h1}>Chef’s Menu</Text>
-      <Text style={styles.total}>Total menu items: {items.length}</Text>
+      <Text style={styles.total}>Total menu items: {items.length}</Text> 
 
       {averagePrices.length > 0 && (
         <View style={styles.averagePricesContainer}>
-          <Text style={styles.averagePricesTitle}>Average Prices by Course:</Text>
+          <Text style={styles.averagePricesTitle}>Average Prices by Course:</Text>  
           {averagePrices.map((data) => (
             <Text key={data.course} style={styles.averagePriceText}>
               {data.course}: R{data.average.toFixed(2)}
@@ -44,7 +44,7 @@ const Home: React.FC<HomeProps> = ({ items, onAddClick, onGuestClick }) => {
           ))}
         </View>
       )}
-
+      // buttons to move to 2 other pages
       <View style={styles.buttonContainer}>
         <Pressable style={styles.manageBtn} onPress={onAddClick}>
           <Text style={styles.buttonText}>Manage Menu</Text>
@@ -55,7 +55,7 @@ const Home: React.FC<HomeProps> = ({ items, onAddClick, onGuestClick }) => {
       </View>
 
       {items.length === 0 ? (
-        <Text style={styles.empty}>No dishes yet. Add your first dish below.</Text>
+        <Text style={styles.empty}>No dishes yet. Add your first dish below.</Text>// test that is displayed when no dishes are added 
       ) : (
         <View style={styles.menuList}>
           {items.map((item) => (
@@ -66,7 +66,7 @@ const Home: React.FC<HomeProps> = ({ items, onAddClick, onGuestClick }) => {
     </ScrollView>
   );
 };
-
+// styling for buttons and containers and text and colors
 const styles = StyleSheet.create({
   container: {
     padding: 30,
