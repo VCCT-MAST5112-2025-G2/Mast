@@ -33,7 +33,7 @@ https://youtube.be/Y7bnVplmPcs?feature=shared
    * Expo: A framework and platform for universal React applications.
     *  TypeScript: For type-safe JavaScript, and coding.
      * ChatGPT: To help understand ideas and help impliment them into code, Was used only for ideas and how to impliment specific code like "Containers".
-      *Github: TO Commit code and update README as coding was happening.
+      * Github: T Commit code and update README as coding was happening.
    
    **How to operate the Chef's Menu App:**
    1. **Launch the App:**
