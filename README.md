@@ -27,7 +27,7 @@
 ##**Github link:**
 https://github.com/VCCT-MAST5112-2025-G2/Mast
 #**Youtube Link:**
-https://youtube.be/Y7bnVplmPcs?feature=shared 
+https://youtu.be/Y7bnVplmPcs  (PART 2)
 # **Soft Ware Used:**
   * React Native: For building native mobile applications using JavaScript and React.
    * Expo: A framework and platform for universal React applications.
