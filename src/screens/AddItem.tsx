@@ -30,6 +30,13 @@ const AddItem: React.FC<AddItemProps> = ({ onAdd, onCancel }) => {
     Alert.alert("Success", "Dish added successfully.");
   };
 
+  const handleClear = () => {
+    setDishName("");
+    setDescription("");
+    setCourse("Starters");
+    setPrice("");
+  };
+
   return (
     <ScrollView style={styles.addItemPage}>
       <Text style={styles.title}>Add Menu Item</Text>
@@ -73,6 +80,9 @@ const AddItem: React.FC<AddItemProps> = ({ onAdd, onCancel }) => {
         <View style={styles.btnRow}>
           <Pressable style={styles.saveBtn} onPress={handleSubmit}>
             <Text style={styles.btnText}>Add Dish</Text>
+          </Pressable>
+          <Pressable style={styles.clearBtn} onPress={handleClear}>
+            <Text style={styles.btnText}>Clear</Text>
           </Pressable>
           <Pressable style={styles.cancelBtn} onPress={onCancel}>
             <Text style={styles.btnText}>Cancel</Text>
@@ -130,6 +140,17 @@ const styles = StyleSheet.create({
   },
   cancelBtn: {
     backgroundColor: '#007bff',
+    borderRadius: 6,
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 1,
+  },
+  clearBtn: {
+    backgroundColor: '#ffc107', 
     borderRadius: 6,
     paddingVertical: 10,
     paddingHorizontal: 20,

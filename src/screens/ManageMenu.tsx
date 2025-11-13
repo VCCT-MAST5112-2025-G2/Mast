@@ -37,6 +37,13 @@ const ManageMenu: React.FC<ManageMenuProps> = ({ items, onAddItem, onRemoveItem,
     setPrice("");
   };
 
+  const handleCancel = () => {
+    setDishName("");
+    setDescription("");
+    setCourse("Starters");
+    setPrice("");
+  };
+
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.title}>Manage Menu Items</Text>
@@ -78,6 +85,9 @@ const ManageMenu: React.FC<ManageMenuProps> = ({ items, onAddItem, onRemoveItem,
           keyboardType="numeric"
         />
 
+        <Pressable style={styles.cancelBtn} onPress={handleCancel}>
+          <Text style={styles.btnText}>Cancel</Text>
+        </Pressable>
         <Pressable style={styles.saveBtn} onPress={handleSubmit}>
           <Text style={styles.btnText}>Add Dish</Text>
         </Pressable>
@@ -161,6 +171,17 @@ const styles = StyleSheet.create({
   },
   saveBtn: {
     backgroundColor: 'green',
+    paddingVertical: 12,
+    paddingHorizontal: 25,
+    borderRadius: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.1,
+    shadowRadius: 2,
+    elevation: 1,
+  },
+  cancelBtn: {
+    backgroundColor: '#dc3545', 
     paddingVertical: 12,
     paddingHorizontal: 25,
     borderRadius: 8,

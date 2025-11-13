@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, ScrollView, Pressable } from "react-native";
-import { Picker } from '@react-native-picker/picker';
+
 import { MenuItem } from "./MenuItem";
 import MenuItemCard from "./MenuItemCard";
 
@@ -12,6 +12,7 @@ interface GuestMenuProps {
 
 const GuestMenu: React.FC<GuestMenuProps> = ({ items, onHomeClick, onManageClick }) => {
   const [selectedCourse, setSelectedCourse] = useState<string>("All");
+  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
 
   const filteredItems = selectedCourse === "All"
     ? items
@@ -19,21 +20,37 @@ const GuestMenu: React.FC<GuestMenuProps> = ({ items, onHomeClick, onManageClick
 
   const courses = ["All", ...Array.from(new Set(items.map(item => item.course)))];
 
+  const handleCourseSelect = (course: string) => {
+    setSelectedCourse(course);
+    setIsDropdownOpen(false);
+  };
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.title}>Guest Menu</Text>
 
       <View style={styles.filterContainer}>
         <Text style={styles.filterLabel}>Filter by Course:</Text>
-        <Picker
-          selectedValue={selectedCourse}
-          style={styles.picker}
-          onValueChange={(itemValue) => setSelectedCourse(itemValue as string)}
-        >
-          {courses.map((course) => (
-            <Picker.Item key={course} label={course} value={course} />
-          ))}
-        </Picker>
+        <View style={{ position: 'relative' }}>
+          <Pressable style={styles.dropdownButton} onPress={() => setIsDropdownOpen(!isDropdownOpen)}>
+            <Text style={styles.dropdownButtonText}>{selectedCourse}</Text>
+          </Pressable>
+
+          {isDropdownOpen && (
+            <View style={styles.dropdownOptionsContainer}>
+              {courses.map((course) => (
+                <Pressable
+                  key={course}
+                  style={styles.dropdownOption}
+                  onPress={() => handleCourseSelect(course)}
+                >
+                  <Text style={styles.dropdownOptionText}>{course}</Text>
+                </Pressable>
+              ))}
+            </View>
+          )}
+        </View>
+
       </View>
 
       {filteredItems.length === 0 ? (
@@ -72,8 +89,8 @@ const styles = StyleSheet.create({
     color: '#007bff',
   },
   filterContainer: {
-    flexDirection: 'row',
-    alignItems: 'center', 
+    flexDirection: 'column', 
+    alignItems: 'flex-start', 
     marginBottom: 20,
     backgroundColor: '#f8f9fa',
     padding: 10,
@@ -84,15 +101,41 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
     elevation: 1,
   },
-  filterLabel: {
-    fontSize: 16,
-    marginRight: 10,
-    fontWeight: 'bold',
-    color: '#6c757d',
+  dropdownButton: {
+    backgroundColor: '#007bff', 
+    padding: 10,
+    borderRadius: 5,
+    borderWidth: 1,
+    borderColor: '#ced4da',
+    minWidth: 120,
+    alignItems: 'center',
+    marginTop: 5, 
   },
-  picker: {
-    width: 150, // Set a fixed width
-    height: 40,
+  dropdownButtonText: {
+    fontSize: 16,
+    color: 'white', 
+  },
+  dropdownOptionsContainer: {
+    backgroundColor: '#fff',
+    borderWidth: 1,
+    borderColor: '#ced4da',
+    borderRadius: 5,
+    
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+    marginTop: 5,
+  },
+  dropdownOption: {
+    padding: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#e9ecef',
+  },
+  dropdownOptionText: {
+    fontSize: 16,
+    color: '#495057',
   },
   menuList: {
     marginTop: 20,
