@@ -2,13 +2,13 @@
    A simple mobile application for managing and displaying a restaurant's menu items.
      This app allows chefs or staff to add new dishes
       with details like name, description, course, and price, and view them in a list.
-   ## **Features:**
+   # **Features:**
    **View Menu Items:** See a list of all added dishes.
      **Add New Items:** Easily add new dishes with a dedicated form.
     **Dish Details:** Each menu item includes a dish name, description, 
     course (e.g., Starters, Mains, Desserts), and price.
     **Simple Navigation:** Seamlessly switch between viewing the menu and adding new items.
-   ##**How to Run:**
+   #**How to Run:**
    **This project is built with React Native and Expo.**
    1.  **Clone the repository:**
       git clone <repository-url>
@@ -26,9 +26,9 @@ Run on an iOS simulator (macOS only).
 Run in a web browser (limited functionality for some native modules).
 ##**Github link:**
 https://github.com/VCCT-MAST5112-2025-G2/Mast
-##**Youtube Link:**
+#**Youtube Link:**
 https://youtube.be/Y7bnVplmPcs?feature=shared 
-## **Soft Ware Used:**
+# **Soft Ware Used:**
    React Native: For building native mobile applications using JavaScript and React.
     Expo: A framework and platform for universal React applications.
       TypeScript: For type-safe JavaScript.
