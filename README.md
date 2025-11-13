@@ -52,19 +52,19 @@ https://youtube.be/Y7bnVplmPcs?feature=shared
    3. **View Menu Items:**
        * On the Home Screen, all added menu items are displayed as cards, showing their name, description, course, and price.
      
-#Changelog
-   *New pages for "Manage Menu" and "Guest Menu" were created, and the
+# Changelog
+   * New pages for "Manage Menu" and "Guest Menu" were created, and the
    "Add New Item" functionality was moved to its own separate page.
-   *The guest and manage menu pages also got features for removing dishes and
+   * The guest and manage menu pages also got features for removing dishes and
    calculating the average price of dishes per course.
    
-   *The app's color consistency was improved, and alerts were added for
+   * The app's color consistency was improved, and alerts were added for
    when dishes are added or removed.
-   *A counter for the total number ofdishes was also included.
+   * A counter for the total number ofdishes was also included.
    
-   *The hardcoded menu items were removed from the main app file, and a
+   * The hardcoded menu items were removed from the main app file, and a
    cancel button was added for when a user decides not to add a new dish.
    
-   *Comments were added to all pages, the README was updated 
+   * Comments were added to all pages, the README was updated 
    with new wording and ideas, and some small wording changes were made   
    in the manage menu page.
